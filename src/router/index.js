@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EmpresasView from '../views/EmpresasView.vue'
 import EventosView from '../views/EventosView.vue'
+import VideoMakerView from '../views/VideoMakerView.vue'
 
 const HEADER_OFFSET = 80
 
@@ -25,6 +26,12 @@ const router = createRouter({
       name: 'eventos',
       component: EventosView,
       meta: { title: 'Para eventos — AE Marketing' },
+    },
+    {
+      path: '/video-maker',
+      name: 'video-maker',
+      component: VideoMakerView,
+      meta: { title: 'Vídeo maker para eventos — AE Marketing' },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

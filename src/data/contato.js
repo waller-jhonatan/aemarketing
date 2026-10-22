@@ -9,3 +9,6 @@ export const contato = {
 
 export const whatsappEmpresa = `${WHATSAPP}?text=${encodeURIComponent('Olá! Quero uma proposta de gestão de redes para a minha empresa.')}`
 export const whatsappEvento = `${WHATSAPP}?text=${encodeURIComponent('Olá! Quero um orçamento de vídeo maker para o meu evento.')}`
+
+// Reel usado na página /video-maker.
+export const reelVideomaker = 'https://www.instagram.com/aemarketiing/reel/DaREm6tuPxR/'

@@ -12,9 +12,10 @@ const route = useRoute()
 <svg viewBox="205 210 845 625" width="40" height="30" role="img" aria-label="Logo AE Marketing"><defs><linearGradient id="aeLg1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6A0DC9"></stop><stop offset="1" stop-color="#A63BFF"></stop></linearGradient></defs><polygon points="533,218 705,525 908,525 848,643 625,643 533,472 345,825 215,825" fill="#FFFFFF"></polygon><polygon points="608,240 1040,240 1040,353 664,353" fill="url(#aeLg1)"></polygon><polygon points="637,707 1040,707 1040,826 695,826" fill="url(#aeLg1)"></polygon></svg>
 <span class="d" style="font-weight: 700; letter-spacing: 0.22em; font-size: 14px">MARKETING</span>
 </RouterLink>
-<div class="navlinks" style="display: flex; gap: 32px; font-size: 15px">
+<div class="navlinks" style="display: flex; gap: 28px; font-size: 15px">
 <RouterLink class="navlink" :class="{ 'is-current': route.path === '/empresas' }" to="/empresas">Para empresas</RouterLink>
 <RouterLink class="navlink" :class="{ 'is-current': route.path === '/eventos' }" to="/eventos">Para eventos</RouterLink>
+<RouterLink class="navlink" :class="{ 'is-current': route.path === '/video-maker' }" to="/video-maker">Vídeo maker</RouterLink>
 <RouterLink class="navlink" to="/empresas#processo">Como trabalhamos</RouterLink>
 <RouterLink class="navlink" to="/empresas#planos">Planos</RouterLink>
 </div>
