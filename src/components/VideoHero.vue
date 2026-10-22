@@ -15,10 +15,12 @@ const semVideo = ref(false)
 // visitor pauses. Each video starts itself once it can play, so the desktop
 // frame (rendered later) joins in sync with the background.
 const deveTocar = ref(false)
-// Browsers only allow sound after a click, so videos start muted and the
-// visitor turns sound on. Only one video plays audio: the phone frame on
-// desktop, the full-screen background on mobile.
+// Sound starts on when the browser allows it (e.g. the visitor clicked a
+// link to get here). Otherwise the video plays muted and sound turns on at the
+// first click, tap or key press on the page. Only one video plays audio: the
+// phone frame on desktop, the full-screen background on mobile.
 const somAtivo = ref(false)
+let escolheuSom = false
 let mq
 
 function videos() {
@@ -31,11 +33,48 @@ function alternar() {
 }
 
 function aplicarSom() {
-  const comSom = desktop.value && quadro.value ? quadro.value : fundo.value
+  const comSom = videoComSom()
   videos().forEach((v) => (v.muted = !(somAtivo.value && v === comSom)))
 }
 
+function videoComSom() {
+  return desktop.value && quadro.value ? quadro.value : fundo.value
+}
+
+function tocar(v) {
+  v.play().catch((err) => {
+    if (err.name !== 'NotAllowedError' || v.muted) return
+    // Autoplay with sound blocked: keep playing muted, wait for a gesture.
+    somAtivo.value = false
+    aplicarSom()
+    v.play().catch(() => {})
+    esperarGesto()
+  })
+}
+
+const GESTOS = ['click', 'touchend', 'keydown']
+
+function aoGesto(ev) {
+  pararDeEsperar()
+  // The sound button handles its own click.
+  if (escolheuSom || ev.target.closest?.('.vh-controles')) return
+  somAtivo.value = true
+  aplicarSom()
+  deveTocar.value = true
+  videos().forEach((v) => v.paused && v.play().catch(() => {}))
+}
+
+function esperarGesto() {
+  GESTOS.forEach((t) => document.addEventListener(t, aoGesto, { capture: true }))
+}
+
+function pararDeEsperar() {
+  GESTOS.forEach((t) => document.removeEventListener(t, aoGesto, { capture: true }))
+}
+
 function alternarSom() {
+  escolheuSom = true
+  pararDeEsperar()
   somAtivo.value = !somAtivo.value
   aplicarSom()
   if (somAtivo.value && !deveTocar.value) alternar()
@@ -53,7 +92,7 @@ function pronto(ev) {
   iniciados.add(v)
   if (v !== fundo.value && fundo.value) v.currentTime = fundo.value.currentTime
   aplicarSom()
-  if (deveTocar.value && v.paused) v.play().catch(() => {})
+  if (deveTocar.value && v.paused) tocar(v)
 }
 
 // Browsers pause muted background videos in hidden tabs; resume on return.
@@ -73,12 +112,14 @@ onMounted(() => {
   mq.addEventListener('change', sincronizarTamanho)
   document.addEventListener('visibilitychange', aoVoltar)
   deveTocar.value = !matchMedia('(prefers-reduced-motion: reduce)').matches
+  somAtivo.value = deveTocar.value
   videos().forEach((v) => v.readyState >= 3 && pronto({ target: v }))
 })
 
 onBeforeUnmount(() => {
   mq?.removeEventListener('change', sincronizarTamanho)
   document.removeEventListener('visibilitychange', aoVoltar)
+  pararDeEsperar()
 })
 </script>
 

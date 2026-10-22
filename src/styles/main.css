@@ -171,7 +171,7 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 .ae .badge-inline{position:static;margin-left:10px;vertical-align:middle}
 /* Vídeo maker */
 .ae .vh{position:relative;overflow:hidden;isolation:isolate;min-height:calc(100svh - 72px);display:flex;align-items:center;padding:72px 24px 96px;background:#0D0B12}
-.ae .vh-fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(1.1)}
+.ae .vh-fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:brightness(.85) saturate(1.1)}
 .ae .vh-fundo.is-desfocado{inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);filter:blur(6px) brightness(.8) saturate(1.2)}
 .ae .vh-sombra{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(13,11,18,.78) 0%,rgba(13,11,18,.4) 45%,rgba(13,11,18,0) 75%),linear-gradient(0deg,#0D0B12 0%,rgba(13,11,18,0) 22%)}
 .ae .vh-grade{position:relative;width:100%;max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:56px}
