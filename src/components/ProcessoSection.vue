@@ -1,0 +1,16 @@
+<template>
+<section id="processo" style="background: #F6F4F9; color: #16131D; padding: 120px 24px">
+<div style="max-width: 1240px; margin: 0 auto">
+<p class="m rv" style="margin: 0 0 20px; font-size: 13px; color: #6B12C9; display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 32px; height: 2px; background: #6B12C9; display: inline-block"></span>Como trabalhamos</p>
+<h2 class="rv" style="margin: 0 0 56px; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em">Simples, do começo <span class="grad">ao resultado.</span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 0 56px">
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">01</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Análise</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Entendemos a marca, o público e o momento do negócio.</p></div></div>
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">02</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Pesquisa de mercado</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Mapeamos concorrentes, oportunidades e tendências.</p></div></div>
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">03</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Reunião de ideias</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Alinhamos pilares, tom de voz e direção criativa.</p></div></div>
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">04</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Desenvolvimento de marca</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Construímos identidade visual e marketing de marca.</p></div></div>
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8; border-bottom: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">05</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Implantação</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Colocamos no ar, monitoramos e ajustamos a rota.</p></div></div>
+<div class="row rv" style="display: flex; gap: 24px; padding: 28px 0; border-top: 1px solid #DDD6E8; border-bottom: 1px solid #DDD6E8"><span class="d grad" style="font-size: 28px; font-weight: 800; min-width: 48px">06</span><div><h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700">Acompanhamento</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5E5869">Relatórios, métricas e novos ciclos de melhoria.</p></div></div>
+</div>
+</div>
+</section>
+</template>
