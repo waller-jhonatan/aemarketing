@@ -1,14 +1,20 @@
 <script setup>
-import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { reelVideomaker, whatsappEvento } from '../data/contato'
 
-// Vídeo original do reel, com o áudio intacto.
-const VIDEO = '/video/video1.mp4'
-const POSTER = '/img/storymaker.jpg'
+// Desktop usa o vídeo original do reel; celular usa uma versão mais leve
+// (540x960, ~12 MB) para começar a tocar mais rápido. A capa é o primeiro
+// quadro do vídeo, então a página já abre com a imagem certa.
+const VIDEO_DESKTOP = '/video/video1.mp4'
+const VIDEO_CELULAR = '/video/video-mobile.mp4'
+const POSTER = '/video/video-capa.jpg'
+const QUERY_DESKTOP = '(min-width: 980px)'
 
 const fundo = ref(null)
 const quadro = ref(null)
-const desktop = ref(false)
+// Read synchronously so the first render already picks the right file.
+const desktop = ref(matchMedia(QUERY_DESKTOP).matches)
+const VIDEO = computed(() => (desktop.value ? VIDEO_DESKTOP : VIDEO_CELULAR))
 const tocando = ref(false)
 const semVideo = ref(false)
 // Whether the videos should be playing: off for reduced motion or after the
@@ -80,11 +86,17 @@ function alternarSom() {
   if (somAtivo.value && !deveTocar.value) alternar()
 }
 
-watch(desktop, () => nextTick(aplicarSom))
+
 
 // Runs once per video element. `canplay` fires again after every seek, so
 // syncing on each event would seek in a loop and chop up the audio.
 const iniciados = new WeakSet()
+
+// Crossing the breakpoint swaps the background file, so let it start again.
+watch(desktop, () => {
+  if (fundo.value) iniciados.delete(fundo.value)
+  nextTick(aplicarSom)
+})
 
 function pronto(ev) {
   const v = ev.target
@@ -107,7 +119,7 @@ function sincronizarTamanho() {
 }
 
 onMounted(() => {
-  mq = matchMedia('(min-width: 980px)')
+  mq = matchMedia(QUERY_DESKTOP)
   sincronizarTamanho()
   mq.addEventListener('change', sincronizarTamanho)
   document.addEventListener('visibilitychange', aoVoltar)
@@ -134,7 +146,7 @@ onBeforeUnmount(() => {
       muted
       loop
       playsinline
-      preload="metadata"
+      preload="auto"
       aria-hidden="true"
       @canplay="pronto"
       @play="tocando = true"
@@ -186,7 +198,7 @@ onBeforeUnmount(() => {
             muted
             loop
             playsinline
-            preload="metadata"
+            preload="auto"
             @canplay="pronto"
             aria-label="Trecho de uma cobertura de casamento feita pela AE Marketing"
           ></video>
