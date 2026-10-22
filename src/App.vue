@@ -1,6 +1,7 @@
 <script setup>
 import { nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { Analytics } from '@vercel/analytics/vue'
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import { useReveal } from './composables/useReveal'
@@ -18,5 +19,6 @@ watch(() => route.fullPath, () => nextTick(refresh))
       <RouterView />
     </main>
     <SiteFooter />
+    <Analytics />
   </div>
 </template>
