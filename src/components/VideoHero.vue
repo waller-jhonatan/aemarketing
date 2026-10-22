@@ -38,6 +38,13 @@ function videos() {
 // `deveTocar` is still true, and flipping the flag would need two taps.
 function alternar() {
   deveTocar.value = !tocando.value
+  // This tap counts as the gesture browsers require for sound, so turn it on
+  // unless the visitor already chose with the sound button.
+  if (deveTocar.value && !escolheuSom) {
+    pararDeEsperar()
+    somAtivo.value = true
+    aplicarSom()
+  }
   videos().forEach((v) => (deveTocar.value ? v.play().catch(() => {}) : v.pause()))
 }
 
