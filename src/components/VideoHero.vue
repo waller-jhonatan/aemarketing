@@ -33,8 +33,11 @@ function videos() {
   return [fundo.value, quadro.value].filter(Boolean)
 }
 
+// Decide from what is on screen, not from `deveTocar`: when the browser blocks
+// autoplay (e.g. iPhone in Low Power Mode) the video sits paused while
+// `deveTocar` is still true, and flipping the flag would need two taps.
 function alternar() {
-  deveTocar.value = !deveTocar.value
+  deveTocar.value = !tocando.value
   videos().forEach((v) => (deveTocar.value ? v.play().catch(() => {}) : v.pause()))
 }
 
