@@ -1,4 +1,4 @@
-// Conteúdo do vídeo maker, usado em /video-maker, /eventos e /video-maker-2.
+// Conteúdo do vídeo maker, usado em /video-maker, /video-maker-2 e /eventos.
 
 export const pilares = [
   {

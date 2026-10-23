@@ -1,6 +1,6 @@
 <script setup>
 import ManifestoSection from '../components/ManifestoSection.vue'
-import ComoRegistramos from '../components/ComoRegistramos.vue'
+import StoriesEtapas from '../components/StoriesEtapas.vue'
 import EventosSection from '../components/EventosSection.vue'
 import MarqueeStrip from '../components/MarqueeStrip.vue'
 import ContatoSection from '../components/ContatoSection.vue'
@@ -14,7 +14,7 @@ const faixa = ['Vídeo maker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'F
   <EventosSection />
   <MarqueeStrip :itens="faixa" />
   <ManifestoSection />
-  <ComoRegistramos />
+  <StoriesEtapas />
   <ContatoSection
     :whatsapp="whatsappEvento"
     texto="Conte pra gente sobre o seu evento. A conversa é rápida e sem compromisso."
