@@ -1,24 +1,7 @@
 <script setup>
 import EtapasEvento from './EtapasEvento.vue'
 import { reelVideomaker, whatsappEvento } from '../data/contato'
-
-const pilares = [
-  {
-    icone: 'olhar',
-    titulo: 'Olhares e emoções',
-    texto: 'Os abraços, os sorrisos e a energia de quem viveu tudo intensamente — os detalhes que fazem a história.',
-  },
-  {
-    icone: 'live',
-    titulo: 'Ao vivo nas redes',
-    texto: 'Stories e bastidores publicados em tempo real, para quem está longe sentir o evento junto.',
-  },
-  {
-    icone: 'filme',
-    titulo: 'Filme editado',
-    texto: 'Material editado com estética profissional, pronto para postar e para guardar para sempre.',
-  },
-]
+import { pilares } from '../data/videomaker'
 </script>
 
 <template>

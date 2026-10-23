@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import EmpresasView from '../views/EmpresasView.vue'
 import EventosView from '../views/EventosView.vue'
 import VideoMakerView from '../views/VideoMakerView.vue'
+import ReelsView from '../views/ReelsView.vue'
 
 const HEADER_OFFSET = 80
 
@@ -31,6 +32,13 @@ const router = createRouter({
       path: '/video-maker',
       name: 'video-maker',
       component: VideoMakerView,
+      meta: { title: 'Vídeo maker para eventos — AE Marketing' },
+    },
+    {
+      // Versão alternativa do vídeo maker, no estilo de um reel do Instagram.
+      path: '/video-maker-2',
+      name: 'video-maker-2',
+      component: ReelsView,
       meta: { title: 'Vídeo maker para eventos — AE Marketing' },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },

@@ -1,11 +1,7 @@
 <script setup>
-defineProps({ escuro: Boolean })
+import { etapas } from '../data/videomaker'
 
-const etapas = [
-  { n: '01', titulo: 'Alinhamos', texto: 'Estilo do evento, roteiro e momentos-chave que não podem faltar.' },
-  { n: '02', titulo: 'Cobrimos', texto: 'Vídeos, fotos e stories ao vivo, do primeiro ao último momento.' },
-  { n: '03', titulo: 'Entregamos', texto: 'Vídeo editado e material pronto para postar e compartilhar.' },
-]
+defineProps({ escuro: Boolean })
 </script>
 
 <template>
