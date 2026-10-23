@@ -1,4 +1,5 @@
 <script setup>
+import EtapasEvento from './EtapasEvento.vue'
 import { reelVideomaker, whatsappEvento } from '../data/contato'
 
 const pilares = [
@@ -19,11 +20,8 @@ const pilares = [
   },
 ]
 
-const etapas = [
-  { n: '01', titulo: 'Alinhamos', texto: 'Estilo do evento, roteiro e momentos-chave que não podem faltar.' },
-  { n: '02', titulo: 'Cobrimos', texto: 'Vídeos, fotos e stories ao vivo, do primeiro ao último momento.' },
-  { n: '03', titulo: 'Entregamos', texto: 'Vídeo editado e material pronto para postar e compartilhar.' },
-]
+// /eventos mostra as etapas na capa, então pode escondê-las aqui.
+defineProps({ comEtapas: { type: Boolean, default: true } })
 </script>
 
 <template>
@@ -69,15 +67,7 @@ const etapas = [
         </article>
       </div>
 
-      <ol class="rv vm-etapas">
-        <li v-for="e in etapas" :key="e.n">
-          <span class="d grad">{{ e.n }}</span>
-          <div>
-            <h3 class="d">{{ e.titulo }}</h3>
-            <p>{{ e.texto }}</p>
-          </div>
-        </li>
-      </ol>
+      <EtapasEvento v-if="comEtapas" />
 
       <div class="rv" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 14px">
         <a class="btn btn-p" :href="whatsappEvento" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 999px; background: linear-gradient(100deg,#6A0DC9,#9B3BFF); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">
