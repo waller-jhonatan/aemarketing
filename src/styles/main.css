@@ -135,7 +135,7 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 }
 .ae .caminho{border-radius:24px;padding:44px 40px;display:flex;flex-direction:column;gap:20px;text-decoration:none}
 .rv-on .ae #caminhos article.rv.is-in,.rv-on .ae #caminhos .card.rv.is-in{animation-name:aeRise;animation-duration:1.1s}
-.rv-on .ae #caminhos .card.rv.is-in:nth-child(2){animation-delay:.12s}
+.rv-on .ae #caminhos .card.rv.is-in:nth-child(n+2){animation-delay:.12s}
 .ae header .btn-p{white-space:nowrap}
 @media (max-width:420px){.ae header nav{padding:16px 16px !important;gap:12px !important}.ae header .btn-p{padding:0 14px !important;font-size:14px !important}}
 @media (max-width:420px){.ae .navmobile{gap:6px;padding:0 12px 12px}.ae .navmobile a{padding:10px 6px;font-size:13px}}
@@ -204,3 +204,56 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 .rv-on .ae .vm-etapas.is-in>li:nth-child(3){animation-delay:.3s}
 .ae .navlink{white-space:nowrap}
 @media (max-width:1120px){.ae .navlinks{gap:18px !important;font-size:14px !important}}
+/* Dois caminhos (home) */
+.ae .dc{background:#F6F4F9;color:#16131D;padding:120px 24px}
+.ae .dc-cab{max-width:760px;margin-bottom:56px}
+.ae .dc-sub{margin:20px 0 0;max-width:620px;font-size:18px;line-height:1.6;color:#5E5869}
+.ae .dc-grade{position:relative;display:flex;align-items:stretch;gap:24px}
+.ae .dc-painel{flex:1 1 0;min-width:0;border-radius:28px;padding:44px 40px;display:flex;flex-direction:column;gap:20px;transition:flex-grow .6s cubic-bezier(.2,.7,.2,1),transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease,border-color .4s ease}
+.ae .dc-painel:hover{flex-grow:1.25}
+.ae .dc-painel.is-claro{background:#FFFFFF;border:1px solid #E7E2EF}
+.ae .dc-painel.is-escuro{background:#16131D;color:#F4F1FA;border:1px solid #16131D}
+.ae .dc-topo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.ae .dc-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:12px;background:#F0E6FF;color:#6B12C9}
+.ae .is-escuro .dc-chip{background:rgba(255,255,255,.08);color:#FFFFFF}
+.ae .dc-chip .live,.ae .dc-tag .live{width:8px;height:8px;border-radius:50%;background:#FF4D6D;display:inline-block}
+.ae .dc-nota{font-size:11px;color:#8E879B}
+.ae .dc-painel h3{margin:0;font-size:clamp(28px,2.6vw,34px);line-height:1.15;font-weight:700}
+.ae .dc-texto{margin:0;font-size:17px;line-height:1.6;color:#5E5869}
+.ae .is-escuro .dc-texto{color:#B9B2C7}
+.ae .dc-semana{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:16px;border-radius:18px;background:#F6F4F9;border:1px solid #EEE9F4}
+.ae .dc-dia{display:flex;flex-direction:column;gap:6px;min-width:0}
+.ae .dc-dia-nome{font-size:11px;color:#8E879B;text-align:center}
+.ae .dc-dia-nome b{font-weight:400}
+.ae .dc-dia-nome i{display:none;font-style:normal}
+.ae .dc-pilula{display:block;padding:7px 4px;border-radius:8px;font-size:11px;font-weight:600;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#E7E2EF;color:#2A2533;transition:translate .3s}
+.ae .dc-pilula.is-reels{background:linear-gradient(100deg,#6A0DC9,#9B3BFF);color:#FFFFFF}
+.ae .dc-pilula.is-stories{background:#FFE1E7;color:#B8143A}
+.ae .dc-pilula.is-anuncio{background:#16131D;color:#FFFFFF}
+.ae .dc-pilula.is-relatorio{background:#FFFFFF;border:1px dashed #C9A4FF;color:#6B12C9}
+.ae .dc-painel:hover .dc-pilula{translate:0 -2px}
+.ae .dc-dia-evento{position:relative;margin:0;padding:16px 16px 16px 18px;list-style:none;display:flex;flex-direction:column;gap:14px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.ae .dc-dia-evento::before{content:'';position:absolute;left:79px;top:26px;bottom:26px;width:2px;background:rgba(255,255,255,.14);transform-origin:50% 0}
+.ae .dc-momento{display:grid;grid-template-columns:44px 12px 1fr auto;align-items:center;gap:12px;font-size:14px}
+.ae .dc-hora{font-size:11px;color:#B57BFF}
+.ae .dc-ponto{position:relative;width:12px;height:12px;border-radius:50%;background:#3A3346;box-shadow:0 0 0 3px #16131D}
+.ae .dc-ponto.is-live{background:#FF4D6D;box-shadow:0 0 0 3px #16131D,0 0 0 5px rgba(255,77,109,.35)}
+.ae .dc-nome{font-weight:600;color:#FFFFFF}
+.ae .dc-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;font-size:10px;background:rgba(255,255,255,.08);color:#E6DDF5;white-space:nowrap}
+.ae .dc-itens{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px}
+.ae .dc-itens li{display:flex;gap:10px}
+.ae .dc-itens li span{color:#B57BFF;font-weight:700}
+.ae .dc-acoes{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.ae .dc-botao{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:linear-gradient(100deg,#6A0DC9,#9B3BFF);color:#FFFFFF;text-decoration:none;font-weight:600;font-size:15px}
+.ae .dc-link{font-weight:600;font-size:15px;color:#6B12C9;text-decoration:none}
+.ae .is-escuro .dc-link{color:#C9A4FF}
+.ae .dc-link:hover{text-decoration:underline}
+.ae .dc-ou{position:absolute;left:50%;top:50%;z-index:2;translate:-50% -50%;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#FFFFFF;border:2px solid #B57BFF;color:#6B12C9;font-size:13px;box-shadow:0 12px 30px -12px rgba(122,18,224,.5)}
+.rv-on .ae .dc-painel:not(.is-in) .dc-pilula,.rv-on .ae .dc-painel:not(.is-in) .dc-momento{opacity:0}
+.rv-on .ae .dc-painel.is-in .dc-pilula{animation:aePop .5s cubic-bezier(.3,1.5,.5,1) calc(.5s + var(--i,0) * .06s) both}
+.rv-on .ae .dc-painel.is-in .dc-momento{animation:aeUp .6s cubic-bezier(.2,.7,.2,1) calc(.5s + var(--i,0) * .12s) both}
+.rv-on .ae .dc-painel:not(.is-in) .dc-dia-evento::before{transform:scaleY(0)}
+.rv-on .ae .dc-painel.is-in .dc-dia-evento::before{animation:dcLinha 1s cubic-bezier(.2,.7,.2,1) .6s both}
+@keyframes dcLinha{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (max-width:860px){.ae .dc-grade{flex-direction:column}.ae .dc-painel{padding:36px 28px}.ae .dc-painel:hover{flex-grow:1}.ae .dc-ou{position:static;translate:none;margin:-40px auto}}
+@media (max-width:520px){.ae .dc-painel{padding:32px 22px}.ae .dc-semana{grid-template-columns:1fr;gap:8px;padding:14px 16px}.ae .dc-dia{flex-direction:row;align-items:center;gap:8px}.ae .dc-dia-nome{width:30px;text-align:left}.ae .dc-dia-nome b{display:none}.ae .dc-dia-nome i{display:inline}.ae .dc-pilula{flex:0 0 auto;padding:6px 10px}.ae .dc-momento{grid-template-columns:44px 12px 1fr;gap:10px}.ae .dc-tag{grid-column:3;justify-self:start}.ae .dc-dia-evento::before{left:77px}}

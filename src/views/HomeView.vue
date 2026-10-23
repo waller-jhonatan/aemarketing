@@ -1,7 +1,7 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
 import MarqueeStrip from '../components/MarqueeStrip.vue'
-import CaminhosSection from '../components/CaminhosSection.vue'
+import DoisCaminhos from '../components/DoisCaminhos.vue'
 import ResultadosSection from '../components/ResultadosSection.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 </script>
@@ -9,7 +9,7 @@ import ContatoSection from '../components/ContatoSection.vue'
 <template>
   <HeroSection />
   <MarqueeStrip />
-  <CaminhosSection />
+  <DoisCaminhos />
   <ResultadosSection />
   <ContatoSection />
 </template>
