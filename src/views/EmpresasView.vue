@@ -1,7 +1,6 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
 import CaminhosSection from '../components/CaminhosSection.vue'
-import ServicosEmpresas from '../components/ServicosEmpresas.vue'
 import ComoAjudamos from '../components/ComoAjudamos.vue'
 import ProcessoSection from '../components/ProcessoSection.vue'
 import ResultadosSection from '../components/ResultadosSection.vue'
@@ -13,7 +12,6 @@ import { whatsappEmpresa } from '../data/contato'
 <template>
   <HeroSection empresas />
   <CaminhosSection />
-  <ServicosEmpresas />
   <ComoAjudamos />
   <ProcessoSection />
   <ResultadosSection escuro />

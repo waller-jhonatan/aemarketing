@@ -92,7 +92,6 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 .rv-on .ae .rv:not(.is-in){opacity:0;animation:none}
 .rv-on .ae .rv.is-in{animation:aeUp .9s cubic-bezier(.2,.7,.2,1) var(--d,0s) both}
 .rv-on .ae figure.rv.is-in{animation-name:aeClip;animation-duration:1.1s}
-.rv-on .ae #servicos article.rv.is-in{animation-name:aeRise;animation-duration:1.1s}
 .rv-on .ae #ajuda h2.rv.is-in,.rv-on .ae #video h2.rv.is-in,.rv-on .ae #contato h2.rv.is-in{animation-name:aeBlur;animation-duration:1s}
 .rv-on .ae #ajuda div.rv[style*="border-top"].is-in{animation-name:aeLeft}
 .rv-on .ae #video figure.rv.is-in{animation-name:aeRight;animation-duration:1.1s}
