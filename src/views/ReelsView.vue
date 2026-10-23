@@ -5,7 +5,6 @@ import FeedSection from '../components/FeedSection.vue'
 import StoriesEtapas from '../components/StoriesEtapas.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 import { whatsappEvento } from '../data/contato'
-import '../styles/reels.css'
 
 const faixa = ['Reels', 'Stories ao vivo', 'Bastidores', 'Fotos', 'Filme editado', 'Vídeo maker', 'Storymaker']
 </script>
