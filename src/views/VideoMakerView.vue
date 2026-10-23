@@ -1,13 +1,16 @@
 <script setup>
 import VideoHero from '../components/VideoHero.vue'
+import MarqueeStrip from '../components/MarqueeStrip.vue'
 import ManifestoSection from '../components/ManifestoSection.vue'
 import StoriesEtapas from '../components/StoriesEtapas.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 import { whatsappEvento } from '../data/contato'
+import { faixa } from '../data/videomaker'
 </script>
 
 <template>
   <VideoHero />
+  <MarqueeStrip :itens="faixa" />
   <ManifestoSection />
   <StoriesEtapas />
   <ContatoSection

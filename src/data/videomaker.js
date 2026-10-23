@@ -39,3 +39,6 @@ export const etapas = [
 // Reel que toca no celular do topo. A capa é o primeiro quadro do vídeo, e a
 // versão leve (540x960, ~12 MB) basta porque o quadro do celular é estreito.
 export const reel = { video: '/video/video-mobile.mp4', capa: '/video/video-capa.jpg' }
+
+// Faixa que passa abaixo do topo em /eventos e /video-maker.
+export const faixa = ['Vídeo maker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'Fotos', 'Filme editado', 'Momentos eternizados']

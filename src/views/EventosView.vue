@@ -6,8 +6,7 @@ import MarqueeStrip from '../components/MarqueeStrip.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 import LinkEmpresas from '../components/LinkEmpresas.vue'
 import { whatsappEvento } from '../data/contato'
-
-const faixa = ['Vídeo maker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'Fotos', 'Filme editado', 'Momentos eternizados']
+import { faixa } from '../data/videomaker'
 </script>
 
 <template>
