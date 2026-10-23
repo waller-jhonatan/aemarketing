@@ -19,9 +19,6 @@ const pilares = [
     texto: 'Material editado com estética profissional, pronto para postar e para guardar para sempre.',
   },
 ]
-
-// /eventos mostra as etapas na capa, então pode escondê-las aqui.
-defineProps({ comEtapas: { type: Boolean, default: true } })
 </script>
 
 <template>
@@ -67,7 +64,7 @@ defineProps({ comEtapas: { type: Boolean, default: true } })
         </article>
       </div>
 
-      <EtapasEvento v-if="comEtapas" />
+      <EtapasEvento />
 
       <div class="rv" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 14px">
         <a class="btn btn-p" :href="whatsappEvento" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 999px; background: linear-gradient(100deg,#6A0DC9,#9B3BFF); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">

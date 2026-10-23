@@ -13,7 +13,7 @@ const faixa = ['Vídeo maker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'F
   <EventosSection />
   <MarqueeStrip :itens="faixa" />
   <ManifestoSection />
-  <ComoRegistramos :com-etapas="false" />
+  <ComoRegistramos />
   <ContatoSection
     :whatsapp="whatsappEvento"
     texto="Conte pra gente sobre o seu evento. A conversa é rápida e sem compromisso."
