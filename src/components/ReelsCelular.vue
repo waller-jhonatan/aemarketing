@@ -4,7 +4,7 @@ import { contato, reelVideomaker, whatsappEvento } from '../data/contato'
 import { reel } from '../data/videomaker'
 
 // Celular mostrando o reel como se fosse o Instagram: um toque liga o som,
-// dois toques curtem. Usado no topo de /video-maker e /video-maker-2.
+// dois toques curtem. Usado no topo de /video-maker.
 
 const video = ref(null)
 const tocando = ref(false)

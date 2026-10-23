@@ -15,7 +15,7 @@ const route = useRoute()
 <div class="navlinks" style="display: flex; gap: 28px; font-size: 15px">
 <RouterLink class="navlink" :class="{ 'is-current': route.path === '/empresas' }" to="/empresas">Para empresas</RouterLink>
 <RouterLink class="navlink" :class="{ 'is-current': route.path === '/eventos' }" to="/eventos">Para eventos</RouterLink>
-<RouterLink class="navlink" :class="{ 'is-current': route.path.startsWith('/video-maker') }" to="/video-maker">Vídeo maker</RouterLink>
+<RouterLink class="navlink" :class="{ 'is-current': route.path === '/video-maker' }" to="/video-maker">Vídeo maker</RouterLink>
 <RouterLink class="navlink" to="/empresas#processo">Como trabalhamos</RouterLink>
 <RouterLink class="navlink" to="/empresas#planos">Planos</RouterLink>
 </div>
@@ -24,7 +24,7 @@ const route = useRoute()
 <div class="navmobile">
 <RouterLink :class="{ 'is-current': route.path === '/empresas' }" to="/empresas">Para empresas</RouterLink>
 <RouterLink :class="{ 'is-current': route.path === '/eventos' }" to="/eventos">Para eventos</RouterLink>
-<RouterLink :class="{ 'is-current': route.path.startsWith('/video-maker') }" to="/video-maker">Vídeo maker</RouterLink>
+<RouterLink :class="{ 'is-current': route.path === '/video-maker' }" to="/video-maker">Vídeo maker</RouterLink>
 </div>
 <div class="prog" aria-hidden="true" style="position: absolute; left: 0; bottom: -1px; width: 100%; height: 3px; background: linear-gradient(90deg,#6A0DC9,#B57BFF); transform-origin: 0 50%"></div>
 </header>
