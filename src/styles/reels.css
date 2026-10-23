@@ -1,5 +1,5 @@
 /* Vídeo maker no estilo Instagram: /video-maker-2 inteira e o story de etapas em /video-maker */
-.ae .ig{--fs:clamp(40px,11.5vw,176px);--cel:min(300px,76vw);--alt:calc(var(--cel) * 19 / 9);--sobre:.32;position:relative;overflow:hidden;isolation:isolate;background:#0A0810;padding:56px 24px 96px}
+.ae .ig{--fs:clamp(40px,11.5vw,176px);--cel:min(300px,76vw);--alt:calc(var(--cel) * 19 / 9);--sobre:.24;position:relative;overflow:hidden;isolation:isolate;background:#0A0810;padding:56px 24px 96px}
 .ae .ig-linhas{position:absolute;inset:0;z-index:-3;background-image:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:calc(100% / 12) 100%;pointer-events:none}
 .ae .ig-glow{position:absolute;left:50%;top:50%;z-index:-2;width:1000px;height:1000px;border-radius:50%;translate:-50% -50%;background:radial-gradient(circle,rgba(122,18,224,.38) 0%,rgba(10,8,16,0) 60%);pointer-events:none}
 .ae .ig-grao{position:absolute;inset:0;z-index:-1;opacity:.09;mix-blend-mode:screen;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -56,11 +56,12 @@
 .ae .ig-chip>div{animation:igPop .8s cubic-bezier(.3,1.5,.5,1) var(--del,0s) both,aeFloat var(--dur,7s) ease-in-out var(--del,0s) infinite}
 @keyframes igPop{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
 .ae .ig-c1{left:0;top:21%;--z:16;--del:.9s;--dur:7s}
-.ae .ig-c2{left:3%;top:43%;--z:9;--del:1.15s;--dur:8.5s}
-.ae .ig-c3{left:1%;bottom:3%;--z:14;--del:1.4s;--dur:7.5s}
+.ae .ig-c2{left:3%;top:38%;--z:9;--del:1.15s;--dur:8.5s}
+/* The two lower cards sit just above ETERNIZADOS instead of covering it. */
+.ae .ig-c3{left:1%;bottom:calc(.84 * var(--fs));--z:14;--del:1.4s;--dur:7.5s}
 .ae .ig-c4{right:0;top:19%;--z:15;--del:1s;--dur:8s}
-.ae .ig-c5{right:3%;top:47%;--z:10;--del:1.25s;--dur:7.2s}
-.ae .ig-c6{right:1%;bottom:6%;--z:13;--del:1.5s;--dur:9s}
+.ae .ig-c5{right:3%;top:44%;--z:10;--del:1.25s;--dur:7.2s}
+.ae .ig-c6{right:1%;bottom:calc(.9 * var(--fs));--z:13;--del:1.5s;--dur:9s}
 .ae .ig-cartao{width:max-content;max-width:280px;border-radius:18px;padding:16px 18px;background:rgba(22,19,29,.82);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);color:#F4F1FA;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);font-size:14px;line-height:1.45}
 .ae .ig-cartao.is-claro{background:#EDE3FF;border-color:#EDE3FF;color:#2A0D55}
 .ae .ig-cartao strong{display:block;font-size:15px;line-height:1.25}
