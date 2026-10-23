@@ -1,15 +1,16 @@
 <script setup>
 // "Escolha seu caminho" da home: empresas (presença todo mês) e eventos (um
-// dia único), lado a lado. O painel sob o mouse cresce um pouco.
+// dia único), lado a lado, com a mesma estrutura para ficarem do mesmo
+// tamanho: título, texto, um bloco ilustrado, quatro itens e os botões.
 
 // No celular a semana vira uma lista, com o nome do dia por extenso.
 const semana = [
   { dia: 'Seg', itens: [{ nome: 'Post', tipo: 'post' }] },
-  { dia: 'Ter', itens: [{ nome: 'Reels', tipo: 'reels' }] },
-  { dia: 'Qua', itens: [{ nome: 'Stories', tipo: 'stories' }] },
+  { dia: 'Ter', itens: [{ nome: 'Reels', tipo: 'reels' }, { nome: 'Stories', tipo: 'stories' }] },
+  { dia: 'Qua', itens: [{ nome: 'Post', tipo: 'post' }] },
   { dia: 'Qui', itens: [{ nome: 'Anúncio', tipo: 'anuncio' }, { nome: 'Stories', tipo: 'stories' }] },
   { dia: 'Sex', itens: [{ nome: 'Reels', tipo: 'reels' }] },
-  { dia: 'Sáb', itens: [{ nome: 'Stories', tipo: 'stories' }] },
+  { dia: 'Sáb', itens: [{ nome: 'Stories', tipo: 'stories' }, { nome: 'Post', tipo: 'post' }] },
   { dia: 'Dom', itens: [{ nome: 'Relatório', tipo: 'relatorio' }] },
 ]
 
@@ -27,7 +28,12 @@ const momentos = [
   { hora: '+1 dia', nome: 'Entrega', tag: 'Vídeo editado' },
 ]
 
-const itensEventos = ['Vídeos e fotos do evento', 'Stories em tempo real', 'Bastidores e entrega editada']
+const entregas = [
+  { icone: 'video', titulo: 'Vídeos e fotos', texto: 'Registrados durante o evento.' },
+  { icone: 'live', titulo: 'Stories ao vivo', texto: 'Publicados na hora, para quem está longe.' },
+  { icone: 'olhar', titulo: 'Bastidores', texto: 'Os detalhes que ninguém viu.' },
+  { icone: 'filme', titulo: 'Filme editado', texto: 'Com estética profissional, pronto para postar.' },
+]
 </script>
 
 <template>
@@ -54,10 +60,13 @@ const itensEventos = ['Vídeos e fotos do evento', 'Stories em tempo real', 'Bas
           <h3 class="d">Presença todo mês</h3>
           <p class="dc-texto">Gestão de redes, conteúdo e tráfego pago para a sua marca aparecer sempre — e ser escolhida.</p>
 
-          <div class="dc-semana" role="img" aria-label="Exemplo de uma semana de conteúdo: posts, reels, stories, anúncio e relatório">
-            <div v-for="(d, i) in semana" :key="i" class="dc-dia">
-              <span class="m dc-dia-nome" aria-hidden="true"><b>{{ d.dia[0] }}</b><i>{{ d.dia }}</i></span>
-              <span v-for="(it, j) in d.itens" :key="it.nome" class="dc-pilula" :class="`is-${it.tipo}`" :style="{ '--i': i + j }">{{ it.nome }}</span>
+          <div class="dc-bloco" role="img" aria-label="Exemplo de uma semana de conteúdo: posts, reels, stories, anúncio e relatório">
+            <span class="m dc-bloco-titulo" aria-hidden="true">Sua semana nas redes</span>
+            <div class="dc-semana">
+              <div v-for="(d, i) in semana" :key="i" class="dc-dia">
+                <span class="m dc-dia-nome" aria-hidden="true"><b>{{ d.dia[0] }}</b><i>{{ d.dia }}</i></span>
+                <span v-for="(it, j) in d.itens" :key="it.nome" class="dc-pilula" :class="`is-${it.tipo}`" :style="{ '--i': i + j }">{{ it.nome }}</span>
+              </div>
             </div>
           </div>
 
@@ -105,17 +114,40 @@ const itensEventos = ['Vídeos e fotos do evento', 'Stories em tempo real', 'Bas
           <h3 class="d">Um dia único, ao vivo</h3>
           <p class="dc-texto">Vídeo maker e storymaker registrando o seu evento em tempo real, com material editado pronto para postar.</p>
 
-          <ol class="dc-dia-evento" aria-label="Exemplo de cobertura de um evento">
-            <li v-for="(m, i) in momentos" :key="m.hora" class="dc-momento" :style="{ '--i': i }">
-              <span class="m dc-hora">{{ m.hora }}</span>
-              <span class="dc-ponto" :class="{ 'is-live': m.aoVivo }" aria-hidden="true"></span>
-              <span class="dc-nome">{{ m.nome }}</span>
-              <span class="m dc-tag"><span v-if="m.aoVivo" class="live" aria-hidden="true"></span>{{ m.tag }}</span>
-            </li>
-          </ol>
+          <div class="dc-bloco">
+            <span class="m dc-bloco-titulo">O dia do evento</span>
+            <ol class="dc-dia-evento" aria-label="Exemplo de cobertura de um evento">
+              <li v-for="(m, i) in momentos" :key="m.hora" class="dc-momento" :style="{ '--i': i }">
+                <span class="m dc-hora">{{ m.hora }}</span>
+                <span class="dc-ponto" :class="{ 'is-live': m.aoVivo }" aria-hidden="true"></span>
+                <span class="dc-nome">{{ m.nome }}</span>
+                <span class="m dc-tag"><span v-if="m.aoVivo" class="live" aria-hidden="true"></span>{{ m.tag }}</span>
+              </li>
+            </ol>
+          </div>
 
-          <ul class="dc-itens">
-            <li v-for="item in itensEventos" :key="item"><span aria-hidden="true">+</span>{{ item }}</li>
+          <ul class="caminho-servicos">
+            <li v-for="e in entregas" :key="e.titulo">
+              <span class="caminho-icone" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <template v-if="e.icone === 'video'">
+                    <path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.42V7.87a.5.5 0 0 0-.75-.43L16 10.5" />
+                    <rect x="2" y="6" width="14" height="12" rx="2" />
+                  </template>
+                  <template v-else-if="e.icone === 'live'">
+                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5M19.1 4.9C23 8.8 23 15.1 19.1 19" /><circle cx="12" cy="12" r="2" />
+                  </template>
+                  <template v-else-if="e.icone === 'olhar'">
+                    <path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0" /><circle cx="12" cy="12" r="3" />
+                  </template>
+                  <template v-else>
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" /><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5" />
+                  </template>
+                </svg>
+              </span>
+              <strong class="d">{{ e.titulo }}</strong>
+              <span class="caminho-desc">{{ e.texto }}</span>
+            </li>
           </ul>
 
           <div class="dc-acoes">
