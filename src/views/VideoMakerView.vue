@@ -13,5 +13,8 @@ import { whatsappEvento } from '../data/contato'
   <ContatoSection
     :whatsapp="whatsappEvento"
     texto="Conte pra gente sobre o seu evento. A conversa é rápida e sem compromisso."
-  />
+  >
+    O dia passa rápido. Os <span class="grad" style="font-weight: 800">momentos</span> ficam
+    <span class="grad" style="font-weight: 800">para sempre.</span>
+  </ContatoSection>
 </template>
