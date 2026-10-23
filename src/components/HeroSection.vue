@@ -1,6 +1,10 @@
 <script setup>
-import { contato } from '../data/contato'
+import { contato, whatsappEmpresa } from '../data/contato'
 import { anosDeOperacao } from '../data/empresa'
+
+// Em /empresas o botão "Para empresas" vira "Ver planos" e a proposta já
+// chega no WhatsApp com a mensagem de empresa.
+defineProps({ empresas: Boolean })
 
 const anos = anosDeOperacao()
 </script>
@@ -14,8 +18,8 @@ const anos = anosDeOperacao()
 <h1 class="in t2" style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; font-weight: 300; letter-spacing: -0.035em; color: #FFFFFF">Sua marca <span class="grad" style="font-weight: 800">vista,</span><br><span style="font-weight: 800">lembrada</span> e <span class="grad" style="font-weight: 800">escolhida.</span></h1>
 <p class="in t3" style="margin: 28px 0 0; max-width: 540px; font-size: 19px; line-height: 1.6; color: #B9B2C7">Cuidamos das suas redes sociais, criamos conteúdo e registramos seus eventos em tempo real — com estratégia, cuidado e bom humor.</p>
 <div class="in t4" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px">
-<a class="btn btn-p" :href="contato.whatsapp" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 999px; background: linear-gradient(100deg,#6A0DC9,#9B3BFF); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Quero uma proposta <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<RouterLink class="btn btn-g" to="/empresas" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">Para empresas</RouterLink>
+<a class="btn btn-p" :href="empresas ? whatsappEmpresa : contato.whatsapp" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 999px; background: linear-gradient(100deg,#6A0DC9,#9B3BFF); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Quero uma proposta <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<RouterLink class="btn btn-g" :to="empresas ? '/empresas#planos' : '/empresas'" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">{{ empresas ? 'Ver planos' : 'Para empresas' }}</RouterLink>
 <RouterLink class="btn btn-g" to="/eventos" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">Para eventos</RouterLink>
 </div>
 <div class="in t5" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1)">
