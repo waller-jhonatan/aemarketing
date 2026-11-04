@@ -34,6 +34,6 @@ export const cases = [
 
 export const numeros = [
   { valor: anosDeOperacao(), prefixo: '+', rotulo: 'anos de operação' },
-  { valor: 40, prefixo: '+', rotulo: 'clientes ativos', provisorio: true },
-  { valor: 10, prefixo: '', rotulo: 'cidades atendidas', provisorio: true },
+  { valor: 40, prefixo: '+', rotulo: 'clientes ativos' },
+  { valor: 14, prefixo: '+', rotulo: 'cidades atendidas' },
 ]
