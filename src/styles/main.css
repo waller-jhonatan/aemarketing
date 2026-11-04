@@ -299,3 +299,12 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 
 .ae .resultado-itens{margin:auto 0 0;padding:16px 0 0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .ae .resultado-itens li{font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid}
+/* Cards de resultado claros ficam escuros no hover */
+.ae .resultado:not(.gx-dark){transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease,border-color .25s ease,background-color .35s ease}
+.ae .resultado:not(.gx-dark)>p,.ae .resultado:not(.gx-dark) .resultado-itens,.ae .resultado:not(.gx-dark) .resultado-itens li{transition:color .35s ease,border-color .35s ease}
+.ae .resultado:not(.gx-dark):hover{--gx-shine:conic-gradient(from 205deg at 50% 50%,rgba(139,44,245,0) 0deg,#A63BFF 25deg,rgba(181,123,255,.18) 295deg,rgba(139,44,245,0) 360deg);--gx-shine-o:.28;--gx-line:#2C2638;--gx-tile:rgba(166,59,255,.09);--gx-border:#4A3B66;background-color:#16131D !important;color:#F4F1FA}
+.ae .resultado:not(.gx-dark):hover>p.m{color:#C9A4FF !important}
+.ae .resultado:not(.gx-dark):hover>p:not(.m){color:#B9B2C7 !important}
+.ae .resultado:not(.gx-dark):hover h3.grad{background-image:linear-gradient(100deg,#B57BFF 0%,#E2CCFF 100%)}
+.ae .resultado:not(.gx-dark):hover .resultado-itens{border-top-color:rgba(255,255,255,.12) !important}
+.ae .resultado:not(.gx-dark):hover .resultado-itens li{color:#F4F1FA !important;border-color:#4A3B66 !important}
