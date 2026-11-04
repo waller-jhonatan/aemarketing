@@ -41,7 +41,7 @@ onBeforeUnmount(() => desligar())
           <span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Videomaker · Storymaker
         </p>
         <h1 class="in t2" style="margin: 0; font-size: clamp(42px, 6vw, 80px); line-height: 1.02; font-weight: 300; letter-spacing: -0.035em; color: #FFFFFF">
-          Momentos que <span class="grad vh-grad" style="font-weight: 800">merecem</span> ser <span style="font-weight: 800">eternizados.</span>
+          Momentos que <span style="font-weight: 800">merecem</span> ser <span style="font-weight: 800">eternizados.</span>
         </h1>
         <p class="in t3" style="margin: 28px 0 0; max-width: 520px; font-size: 19px; line-height: 1.6; color: #D6D0E2">
           Registramos o seu evento com o olhar de quem conta histórias: a alegria, a emoção, a dança e cada detalhe que
