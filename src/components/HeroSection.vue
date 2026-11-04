@@ -1,12 +1,17 @@
 <script setup>
 import { contato, whatsappEmpresa } from '../data/contato'
 import { anosDeOperacao } from '../data/empresa'
+import { numeros } from '../data/resultados'
 
 // Em /empresas o botão "Para empresas" vira "Ver planos" e a proposta já
 // chega no WhatsApp com a mensagem de empresa.
 defineProps({ empresas: Boolean })
 
 const anos = anosDeOperacao()
+// Clientes e cidades vêm dos mesmos números da faixa de resultados.
+const numero = (rotulo) => numeros.find((n) => n.rotulo === rotulo)
+const clientes = numero('clientes')
+const cidades = numero('cidades atendidas')
 </script>
 
 <template>
@@ -22,8 +27,10 @@ const anos = anosDeOperacao()
 <RouterLink class="btn btn-g" :to="empresas ? '/empresas#planos' : '/empresas'" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">{{ empresas ? 'Ver planos' : 'Para empresas' }}</RouterLink>
 <RouterLink class="btn btn-g" to="/eventos" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">Para eventos</RouterLink>
 </div>
-<div class="in t5" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1)">
+<div class="in t5 hero-numeros" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1)">
 <div><div class="d" style="font-size: 36px; font-weight: 700; color: #FFFFFF">+{{ anos }}</div><div style="font-size: 14px; color: #A9A3B5; margin-top: 4px">anos no mercado</div></div>
+<div><div class="d" style="font-size: 36px; font-weight: 700; color: #FFFFFF">{{ clientes.prefixo }}{{ clientes.valor }}</div><div style="font-size: 14px; color: #A9A3B5; margin-top: 4px">clientes</div></div>
+<div><div class="d" style="font-size: 36px; font-weight: 700; color: #FFFFFF">{{ cidades.prefixo }}{{ cidades.valor }}</div><div style="font-size: 14px; color: #A9A3B5; margin-top: 4px">cidades atendidas</div></div>
 <div><div class="d" style="font-size: 36px; font-weight: 700; color: #FFFFFF">3</div><div style="font-size: 14px; color: #A9A3B5; margin-top: 4px">redes: Instagram, Facebook e TikTok</div></div>
 <div><div class="d grad" style="font-size: 36px; font-weight: 700">100%</div><div style="font-size: 14px; color: #A9A3B5; margin-top: 4px">conteúdo personalizado</div></div>
 </div>
