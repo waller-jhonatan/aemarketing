@@ -103,7 +103,7 @@ onBeforeUnmount(() => {
           Da Zona da Mata <span class="grad">a BH.</span>
         </h2>
         <p class="rv mc-sub">
-          A equipe vai até o seu negócio. Estas são as cidades onde já atendemos empresas.
+          Estas são as cidades onde já temos empresas atendidas.
         </p>
         <p class="rv mc-nota">
           <span class="mc-nota-ponto" aria-hidden="true"></span>
