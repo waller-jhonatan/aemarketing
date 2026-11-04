@@ -5,30 +5,26 @@ import { anosDeOperacao } from './empresa'
 // Itens com `provisorio: true` aparecem marcados em `npm run dev` e são
 // OMITIDOS no build de produção. Ao trocar por dados reais, remova a flag.
 
+// Exemplos genéricos de como a gente trabalha em cada tipo de negócio.
+// Não citam números nem clientes, para não soar como promessa de resultado.
 export const cases = [
   {
-    cliente: 'Nome do cliente',
-    segmento: 'Segmento (ex.: Restaurante)',
-    metrica: '+120%',
-    rotulo: 'de alcance no Instagram em 3 meses',
-    texto: 'Resumo do que foi feito: planejamento de conteúdo, reels semanais e campanhas no Meta Ads.',
-    provisorio: true,
+    segmento: 'Restaurantes e bares',
+    titulo: 'Pratos que dão vontade',
+    texto: 'Fotos e reels que mostram o cardápio, o ambiente e a rotina da casa.',
+    itens: ['Reels', 'Fotos', 'Stories'],
   },
   {
-    cliente: 'Nome do cliente',
-    segmento: 'Segmento (ex.: Clínica)',
-    metrica: '+80',
-    rotulo: 'novos contatos por mês no WhatsApp',
-    texto: 'Resumo do que foi feito: posicionamento do perfil e anúncios direcionados para a região.',
-    provisorio: true,
+    segmento: 'Clínicas e consultórios',
+    titulo: 'Confiança antes da consulta',
+    texto: 'Conteúdo que apresenta a equipe, tira dúvidas comuns e aproxima o paciente.',
+    itens: ['Posts educativos', 'Stories', 'Anúncios locais'],
   },
   {
-    cliente: 'Nome do cliente',
-    segmento: 'Segmento (ex.: Loja)',
-    metrica: '3x',
-    rotulo: 'mais engajamento nos posts',
-    texto: 'Resumo do que foi feito: nova identidade visual do feed e calendário de publicações.',
-    provisorio: true,
+    segmento: 'Lojas e comércio',
+    titulo: 'Vitrine aberta todo dia',
+    texto: 'Lançamentos, promoções e produtos em destaque, com calendário de publicações.',
+    itens: ['Posts', 'Reels', 'Tráfego pago'],
   },
 ]
 

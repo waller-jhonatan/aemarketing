@@ -68,7 +68,7 @@ onBeforeUnmount(() => observer?.disconnect())
           </h2>
         </div>
         <p :style="{ flex: '0 1 380px', margin: 0, fontSize: '17px', lineHeight: 1.6, color: cores.suave }">
-          Alguns dos resultados que construímos junto com nossos clientes.
+          Cada negócio aparece nas redes de um jeito. Veja como a gente costuma trabalhar em cada segmento.
         </p>
       </div>
 
@@ -87,12 +87,11 @@ onBeforeUnmount(() => observer?.disconnect())
           </div>
           <span v-if="c.provisorio" class="m badge-provisorio">Provisório</span>
           <p class="m" :style="{ margin: 0, fontSize: '12px', color: cores.rotulo }">{{ c.segmento }}</p>
-          <div>
-            <div class="d grad" style="font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.03em">{{ c.metrica }}</div>
-            <p :style="{ margin: '10px 0 0', fontSize: '16px', fontWeight: 600 }">{{ c.rotulo }}</p>
-          </div>
+          <h3 class="d grad" style="margin: 0; font-size: clamp(28px, 2.6vw, 34px); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">{{ c.titulo }}</h3>
           <p :style="{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: cores.suave }">{{ c.texto }}</p>
-          <p class="d" :style="{ margin: 'auto 0 0', paddingTop: '16px', borderTop: `1px solid ${cores.linha}`, fontSize: '15px', fontWeight: 600 }">{{ c.cliente }}</p>
+          <ul class="resultado-itens" :style="{ borderTop: `1px solid ${cores.linha}` }" aria-label="O que costuma entrar">
+            <li v-for="item in c.itens" :key="item" :style="{ borderColor: cores.borda, color: cores.texto }">{{ item }}</li>
+          </ul>
         </article>
       </div>
 
