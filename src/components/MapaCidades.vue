@@ -103,7 +103,11 @@ onBeforeUnmount(() => {
           Da Zona da Mata <span class="grad">a BH.</span>
         </h2>
         <p class="rv mc-sub">
-          A equipe vai até você, onde o seu negócio ou o seu evento estiver. Estas são as cidades que já atendemos.
+          A equipe vai até o seu negócio. Estas são as cidades onde já atendemos empresas.
+        </p>
+        <p class="rv mc-nota">
+          <span class="mc-nota-ponto" aria-hidden="true"></span>
+          Eventos: somente em Viçosa e região.
         </p>
         <ul class="rv mc-lista" aria-label="Cidades atendidas">
           <li v-for="c in cidades" :key="c.nome">

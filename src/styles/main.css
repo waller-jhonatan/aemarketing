@@ -273,6 +273,9 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 .ae .mc h2{margin:0;font-size:clamp(36px,4.6vw,60px);line-height:1.05;font-weight:800;letter-spacing:-0.03em}
 .ae .mc-sub{margin:20px 0 0;max-width:460px;font-size:17px;line-height:1.6;color:#5E5869}
 .ae .mc.is-escuro .mc-sub{color:#B9B2C7}
+.ae .mc-nota{margin:16px 0 0;display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:#EDE3FB;color:#4B0E95;font-size:14px;font-weight:500}
+.ae .mc-nota-ponto{width:8px;height:8px;border-radius:50%;background:#FF4D6D;flex:0 0 auto}
+.ae .mc.is-escuro .mc-nota{background:rgba(155,59,255,.16);color:#E2CCFF}
 .ae .mc-lista{margin:32px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .ae .mc-lista button{font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid #E1DAEC;background:#FFFFFF;color:#16131D;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .ae .mc-lista button:hover,.ae .mc-lista button.is-ativa{background:#6B12C9;border-color:#6B12C9;color:#FFFFFF;transform:translateY(-1px)}
