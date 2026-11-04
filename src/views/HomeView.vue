@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection.vue'
 import MarqueeStrip from '../components/MarqueeStrip.vue'
 import DoisCaminhos from '../components/DoisCaminhos.vue'
 import ResultadosSection from '../components/ResultadosSection.vue'
+import MapaCidades from '../components/MapaCidades.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 </script>
 
@@ -11,5 +12,6 @@ import ContatoSection from '../components/ContatoSection.vue'
   <MarqueeStrip />
   <DoisCaminhos />
   <ResultadosSection />
+  <MapaCidades />
   <ContatoSection />
 </template>
