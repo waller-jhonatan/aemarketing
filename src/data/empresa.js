@@ -1,5 +1,5 @@
 // Data de início das operações da AE Marketing.
-export const INICIO_OPERACAO = new Date(2021, 0, 1)
+export const INICIO_OPERACAO = new Date(2018, 0, 1)
 
 // Anos completos de operação até `hoje`.
 export function anosDeOperacao(hoje = new Date()) {

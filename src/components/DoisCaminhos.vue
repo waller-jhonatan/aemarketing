@@ -25,7 +25,7 @@ const momentos = [
   { hora: '16h', nome: 'Cerimônia', tag: 'Stories ao vivo', aoVivo: true },
   { hora: '18h', nome: 'Brinde', tag: 'Fotos' },
   { hora: '21h', nome: 'Pista', tag: 'Bastidores', aoVivo: true },
-  { hora: '+1 dia', nome: 'Entrega', tag: 'Vídeo editado' },
+  { hora: '', nome: 'Entrega', tag: 'Vídeo editado' },
 ]
 
 const entregas = [
@@ -117,7 +117,7 @@ const entregas = [
           <div class="dc-bloco">
             <span class="m dc-bloco-titulo">O dia do evento</span>
             <ol class="dc-dia-evento" aria-label="Exemplo de cobertura de um evento">
-              <li v-for="(m, i) in momentos" :key="m.hora" class="dc-momento" :style="{ '--i': i }">
+              <li v-for="(m, i) in momentos" :key="m.nome" class="dc-momento" :style="{ '--i': i }">
                 <span class="m dc-hora">{{ m.hora }}</span>
                 <span class="dc-ponto" :class="{ 'is-live': m.aoVivo }" aria-hidden="true"></span>
                 <span class="dc-nome">{{ m.nome }}</span>
