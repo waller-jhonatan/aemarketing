@@ -1,7 +1,7 @@
 <script setup>
 // "Escolha seu caminho" da home: empresas (presença todo mês) e eventos (um
 // dia único), lado a lado, com a mesma estrutura para ficarem do mesmo
-// tamanho: título, texto, um bloco ilustrado, quatro itens e os botões.
+// tamanho: título, texto, um bloco ilustrado, os itens e os botões.
 
 // No celular a semana vira uma lista, com o nome do dia por extenso.
 const semana = [
@@ -17,6 +17,7 @@ const servicos = [
   { icone: 'video', titulo: 'Criação de conteúdo', texto: 'Artes, vídeos e conteúdos para marcas.' },
   { icone: 'target', titulo: 'Tráfego pago', texto: 'Campanhas para alcançar o público certo.' },
   { icone: 'trend', titulo: 'Marketing digital', texto: 'Estratégia para fortalecer sua marca.' },
+  { icone: 'filme', titulo: 'Videomaker', texto: 'Gravação e edição de vídeos para a sua marca.' },
 ]
 
 const momentos = [
@@ -82,6 +83,9 @@ const entregas = [
                   </template>
                   <template v-else-if="s.icone === 'target'">
                     <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
+                  </template>
+                  <template v-else-if="s.icone === 'filme'">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" /><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5" />
                   </template>
                   <template v-else>
                     <path d="M22 7 13.5 15.5 8.5 10.5 2 17" /><path d="M16 7h6v6" />
