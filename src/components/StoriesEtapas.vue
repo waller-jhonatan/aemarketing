@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { etapas } from '../data/videomaker'
-import { reelVideomaker, whatsappEvento } from '../data/contato'
+import { contato, whatsappEvento } from '../data/contato'
 
 const FOTOS = ['/img/equipe-sorrindo.jpg', '/img/equipe-filmando.jpg', '/img/storymaker.jpg']
 const DURACAO = 5000
@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
             Orçar meu evento
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
-          <a class="btn btn-g" :href="reelVideomaker" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">
+          <a class="btn btn-g" :href="contato.instagram" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">
             Ver mais no Instagram
           </a>
         </div>
