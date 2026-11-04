@@ -300,5 +300,5 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 .ae .resultado-itens{margin:auto 0 0;padding:16px 0 0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .ae .resultado-itens li{font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid}
 /* Cards de resultado claros: efeito do hover em tons escuros, fundo continua claro */
-.ae .resultado:not(.gx-dark){--gx-shine:conic-gradient(from 225deg at 50% 50%,rgba(22,19,29,0) 0deg,#16131D 25deg,#4A3B66 285deg,#FFFFFF 345deg,rgba(22,19,29,0) 360deg);--gx-shine-o:.22;--gx-line:rgba(22,19,29,.14);--gx-tile:rgba(22,19,29,.06);--gx-border:#16131D}
+.ae .resultado:not(.gx-dark){--gx-shine:conic-gradient(from 225deg at 50% 50%,rgba(22,19,29,0) 0deg,#16131D 25deg,#4A3B66 285deg,#FFFFFF 345deg,rgba(22,19,29,0) 360deg);--gx-shine-o:.22;--gx-line:rgba(22,19,29,.14);--gx-tile:rgba(22,19,29,.06);--gx-border:#B57BFF}
 .ae .resultado:not(.gx-dark):hover{box-shadow:0 24px 48px -24px rgba(22,19,29,.45)}
