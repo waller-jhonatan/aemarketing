@@ -107,7 +107,7 @@ onBeforeUnmount(() => {
         </p>
         <p class="rv mc-nota">
           <span class="mc-nota-ponto" aria-hidden="true"></span>
-          Videomaker incluído, nas mesmas cidades.
+          Eventos: somente em Viçosa e região.
         </p>
         <ul class="rv mc-lista" aria-label="Cidades atendidas">
           <li v-for="c in cidades" :key="c.nome">
