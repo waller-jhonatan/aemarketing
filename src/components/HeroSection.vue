@@ -3,8 +3,9 @@ import { contato, whatsappEmpresa } from '../data/contato'
 import { anosDeOperacao } from '../data/empresa'
 import { numeros } from '../data/resultados'
 
-// Em /empresas o botão "Para empresas" vira "Ver planos" e a proposta já
-// chega no WhatsApp com a mensagem de empresa.
+// Em /empresas o botão "Para empresas" vira "Ver planos", a proposta já
+// chega no WhatsApp com a mensagem de empresa e o hero fica só com as duas
+// fotos da equipe, sem a foto de evento "Ao vivo".
 defineProps({ empresas: Boolean })
 
 const anos = anosDeOperacao()
@@ -42,11 +43,14 @@ const cidades = numero('cidades atendidas')
 <div class="bar" style="width: 150px; height: 28px; border-radius: 6px; transform: skewX(-28deg); background: linear-gradient(90deg,#6A0DC9,#A63BFF); animation-delay: .45s"></div>
 <div class="bar" style="width: 220px; height: 28px; border-radius: 6px; transform: skewX(-28deg); background: linear-gradient(90deg,#6A0DC9,#A63BFF); animation-delay: .6s"></div>
 </div>
-<figure class="photo in t3" style="position: absolute; left: 0; top: 30px; width: 60%; height: 500px; margin: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(122,18,224,0.6); z-index: 1">
+<figure v-if="!empresas" class="photo in t3" style="position: absolute; left: 0; top: 30px; width: 60%; height: 500px; margin: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(122,18,224,0.6); z-index: 1">
 <img src="/img/evento-igreja.jpg" alt="Vídeo maker da AE Marketing gravando com celular e luz durante um evento em uma igreja" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block">
 <span class="m" style="position: absolute; left: 16px; top: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(13,11,18,0.78); color: #FFFFFF; font-size: 12px"><span class="live" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #FF4D6D; display: inline-block"></span>Ao vivo</span>
 </figure>
-<figure class="photo in t4" style="position: absolute; right: 0; top: 0; width: 38%; height: 236px; margin: 0; border-radius: 20px; overflow: hidden; border: 6px solid #0D0B12; z-index: 2">
+<figure v-if="empresas" class="photo in t3" style="position: absolute; left: 0; top: 60px; width: 72%; height: 480px; margin: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(122,18,224,0.6); z-index: 1">
+<img src="/img/equipe-celular.jpg" alt="Duas integrantes da AE Marketing sorrindo e conferindo o celular" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
+</figure>
+<figure v-else class="photo in t4" style="position: absolute; right: 0; top: 0; width: 38%; height: 236px; margin: 0; border-radius: 20px; overflow: hidden; border: 6px solid #0D0B12; z-index: 2">
 <img src="/img/equipe-celular.jpg" alt="Duas integrantes da AE Marketing sorrindo e conferindo o celular" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
 </figure>
 <figure class="photo float" style="position: absolute; right: 0; bottom: 0; width: 46%; height: 300px; margin: 0; border-radius: 20px; overflow: hidden; border: 6px solid #0D0B12; z-index: 2">
