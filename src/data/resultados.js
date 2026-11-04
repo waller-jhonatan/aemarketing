@@ -10,7 +10,7 @@ import { anosDeOperacao } from './empresa'
 export const cases = [
   {
     segmento: 'Restaurantes e bares',
-    titulo: 'Água na boca a cada post',
+    titulo: 'Sabor que se vê nas redes',
     texto: 'Fotos e reels que mostram o cardápio, o ambiente e a rotina da casa.',
     itens: ['Reels', 'Fotos', 'Stories'],
   },
