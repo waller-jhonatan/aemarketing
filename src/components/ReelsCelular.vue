@@ -27,15 +27,16 @@ const coracoes = [
   { x: '-14px', del: '2.8s' },
 ]
 
-// Only plays while the phone is on screen: besides saving battery, calling
-// play() drops the poster, and a video paused before its first frame shows
-// up black. Browsers also refuse or pause muted video in hidden tabs, so this
-// runs again on `canplay`, when the tab is shown and when the phone scrolls
-// back into view.
+// While muted, only plays with the phone on screen: besides saving battery,
+// calling play() drops the poster, and a video paused before its first frame
+// shows up black. Browsers also refuse or pause muted video in hidden tabs, so
+// this runs again on `canplay`, when the tab is shown and when the phone
+// scrolls back into view. With the sound on the visitor asked to hear it, so
+// it keeps playing wherever the page is scrolled, until they mute it.
 let visivel = false
 function tocar() {
   const v = video.value
-  if (v?.paused && deveTocar.value && visivel) v.play().catch(() => {})
+  if (v?.paused && deveTocar.value && (visivel || somAtivo.value)) v.play().catch(() => {})
 }
 
 // Play/pause for a control outside the phone.
@@ -95,7 +96,7 @@ onMounted(() => {
   observador = new IntersectionObserver(([e]) => {
     visivel = e.isIntersecting
     if (visivel) tocar()
-    else video.value?.pause()
+    else if (!somAtivo.value) video.value?.pause()
   })
   observador.observe(video.value)
 })
