@@ -2,7 +2,9 @@
 export const cidades = [
   { nome: 'Viçosa', lat: -20.7546, lng: -42.8825 },
   { nome: 'Belo Horizonte', lat: -19.9167, lng: -43.9345 },
+  { nome: 'Juiz de Fora', lat: -21.7642, lng: -43.3496 },
   { nome: 'Ponte Nova', lat: -20.4161, lng: -42.9083 },
+  { nome: 'Mariana', lat: -20.3778, lng: -43.4167 },
   { nome: 'Ubá', lat: -21.1204, lng: -42.9359 },
   { nome: 'Muriaé', lat: -21.1306, lng: -42.3664 },
   { nome: 'Visconde do Rio Branco', lat: -21.0103, lng: -42.8406 },
