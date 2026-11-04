@@ -19,7 +19,7 @@ const caminhos = [
     to: '/eventos',
     rotulo: 'Para eventos',
     titulo: 'Seu evento ao vivo nas redes',
-    texto: 'Vídeo maker e storymaker cobrindo o seu evento em tempo real, com material editado e pronto para postar.',
+    texto: 'Videomaker e storymaker cobrindo o seu evento em tempo real, com material editado e pronto para postar.',
     itens: ['Vídeos e fotos do evento', 'Stories em tempo real', 'Bastidores e entrega editada'],
     cta: 'Ver cobertura de eventos',
     escuro: true,

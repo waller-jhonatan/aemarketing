@@ -20,7 +20,7 @@ const cidades = numero('cidades atendidas')
 <div class="glow" aria-hidden="true" style="position: absolute; right: -200px; top: -240px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(circle, rgba(140,40,240,0.45) 0%, rgba(13,11,18,0) 65%); pointer-events: none"></div>
 <div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
 <div style="flex: 1 1 540px; min-width: 0">
-<p class="m in t1" style="margin: 0 0 28px; font-size: 13px; color: #C9A4FF; display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Conexão · Estratégia · Vídeo maker</p>
+<p class="m in t1" style="margin: 0 0 28px; font-size: 13px; color: #C9A4FF; display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Conexão · Estratégia · Videomaker</p>
 <h1 class="in t2" style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; font-weight: 300; letter-spacing: -0.035em; color: #FFFFFF">Sua marca <span class="grad" style="font-weight: 800">vista,</span><br><span style="font-weight: 800">lembrada</span> e <span class="grad" style="font-weight: 800">escolhida.</span></h1>
 <p class="in t3" style="margin: 28px 0 0; max-width: 540px; font-size: 19px; line-height: 1.6; color: #B9B2C7">Cuidamos das suas redes sociais, criamos conteúdo e registramos seus eventos em tempo real — com estratégia, cuidado e bom humor.</p>
 <div class="in t4" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px">
@@ -53,7 +53,7 @@ const cidades = numero('cidades atendidas')
 <img src="/img/equipe-celular.jpg" alt="Duas integrantes da AE Marketing sorrindo e conferindo o celular" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
 </figure>
 <figure v-if="!empresas" class="photo float" style="position: absolute; right: 0; bottom: 0; width: 46%; height: 300px; margin: 0; border-radius: 20px; overflow: hidden; border: 6px solid #0D0B12; z-index: 2">
-<img src="/img/evento-igreja.jpg" alt="Vídeo maker da AE Marketing gravando com celular e luz durante um evento em uma igreja" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
+<img src="/img/evento-igreja.jpg" alt="Videomaker da AE Marketing gravando com celular e luz durante um evento em uma igreja" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
 <span class="m" style="position: absolute; left: 14px; top: 14px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(13,11,18,0.78); color: #FFFFFF; font-size: 12px"><span class="live" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #FF4D6D; display: inline-block"></span>Ao vivo</span>
 </figure>
 <figure v-else class="photo float" style="position: absolute; right: 0; bottom: 0; width: 46%; height: 300px; margin: 0; border-radius: 20px; overflow: hidden; border: 6px solid #0D0B12; z-index: 2">

@@ -2,7 +2,7 @@
 defineProps({
   itens: {
     type: Array,
-    default: () => ['Gestão de redes', 'Criação de conteúdo', 'Vídeo maker', 'Storymaker', 'Tráfego pago', 'Cobertura de eventos', 'Posicionamento'],
+    default: () => ['Gestão de redes', 'Criação de conteúdo', 'Videomaker', 'Storymaker', 'Tráfego pago', 'Cobertura de eventos', 'Posicionamento'],
   },
 })
 </script>

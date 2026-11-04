@@ -38,7 +38,7 @@ onBeforeUnmount(() => desligar())
     <div class="vh-grade">
       <div class="vh-texto">
         <p class="m in t1" style="margin: 0 0 24px; font-size: 13px; color: #C9A4FF; display: flex; align-items: center; gap: 12px">
-          <span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Vídeo maker · Storymaker
+          <span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Videomaker · Storymaker
         </p>
         <h1 class="in t2" style="margin: 0; font-size: clamp(42px, 6vw, 80px); line-height: 1.02; font-weight: 300; letter-spacing: -0.035em; color: #FFFFFF">
           Momentos que <span class="grad vh-grad" style="font-weight: 800">merecem</span> ser <span style="font-weight: 800">eternizados.</span>

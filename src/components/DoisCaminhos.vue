@@ -114,7 +114,7 @@ const entregas = [
             <span class="m dc-nota">Cobertura ao vivo</span>
           </header>
           <h3 class="d">Um dia único, ao vivo</h3>
-          <p class="dc-texto">Vídeo maker e storymaker registrando o seu evento em tempo real, com material editado pronto para postar.</p>
+          <p class="dc-texto">Videomaker e storymaker registrando o seu evento em tempo real, com material editado pronto para postar.</p>
 
           <div class="dc-bloco">
             <span class="m dc-bloco-titulo">O dia do evento</span>
@@ -157,7 +157,7 @@ const entregas = [
               Ver cobertura de eventos
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
             </RouterLink>
-            <RouterLink class="dc-link" to="/video-maker">Ver o vídeo maker</RouterLink>
+            <RouterLink class="dc-link" to="/video-maker">Ver o videomaker</RouterLink>
           </div>
         </article>
       </div>

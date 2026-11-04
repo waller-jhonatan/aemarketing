@@ -13,7 +13,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: { title: 'AE Marketing — Conexão, estratégia e vídeo maker' },
+      meta: { title: 'AE Marketing — Conexão, estratégia e videomaker' },
     },
     {
       path: '/empresas',
@@ -31,7 +31,7 @@ const router = createRouter({
       path: '/video-maker',
       name: 'video-maker',
       component: VideoMakerView,
-      meta: { title: 'Vídeo maker para eventos — AE Marketing' },
+      meta: { title: 'Videomaker para eventos — AE Marketing' },
     },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

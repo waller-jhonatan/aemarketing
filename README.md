@@ -8,7 +8,7 @@ Landing page da AE Marketing em Vue 3 + Vite + Vue Router.
 |-------------|--------------------------------------------------------------------------|
 | `/`         | Hero, faixa de serviços, "Escolha seu caminho" (empresas × eventos), contato |
 | `/empresas` | Serviços para empresas, como ajudamos, como trabalhamos, planos, contato |
-| `/eventos`  | Vídeo maker / storymaker para eventos, contato com orçamento de evento   |
+| `/eventos`  | Videomaker / storymaker para eventos, contato com orçamento de evento   |
 
 ## Desenvolvimento
 

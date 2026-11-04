@@ -1,4 +1,4 @@
-// Conteúdo do vídeo maker, usado em /video-maker e /eventos.
+// Conteúdo do videomaker, usado em /video-maker e /eventos.
 
 export const etapas = [
   { n: '01', titulo: 'Alinhamos', texto: 'Estilo do evento, roteiro e momentos-chave que não podem faltar.' },
@@ -11,4 +11,4 @@ export const etapas = [
 export const reel = { video: '/video/video-mobile.mp4', capa: '/video/video-capa.jpg' }
 
 // Faixa que passa abaixo do topo em /eventos e /video-maker.
-export const faixa = ['Vídeo maker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'Fotos', 'Filme editado', 'Momentos eternizados']
+export const faixa = ['Videomaker', 'Storymaker', 'Stories ao vivo', 'Bastidores', 'Fotos', 'Filme editado', 'Momentos eternizados']

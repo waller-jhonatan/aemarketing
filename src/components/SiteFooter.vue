@@ -5,7 +5,7 @@
 <img src="/img/logo.png" alt="AE Marketing" width="96" height="96" loading="lazy" style="width: 96px; height: 96px; border-radius: 16px; display: block; background: #FFFFFF">
 <span class="m" style="font-size: 12px; color: #A9A3B5">AE Marketing · 2026</span>
 </div>
-<p class="m" style="margin: 0; font-size: 11px; color: #8F889C">Conexão · Estratégia · Vídeo maker</p>
+<p class="m" style="margin: 0; font-size: 11px; color: #8F889C">Conexão · Estratégia · Videomaker</p>
 </div>
 </footer>
 </template>
