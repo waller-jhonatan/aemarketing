@@ -3,6 +3,7 @@ import ManifestoSection from '../components/ManifestoSection.vue'
 import StoriesEtapas from '../components/StoriesEtapas.vue'
 import EventosSection from '../components/EventosSection.vue'
 import MarqueeStrip from '../components/MarqueeStrip.vue'
+import EntregasEvento from '../components/EntregasEvento.vue'
 import ContatoSection from '../components/ContatoSection.vue'
 import LinkEmpresas from '../components/LinkEmpresas.vue'
 import { whatsappEvento } from '../data/contato'
@@ -12,6 +13,7 @@ import { faixa } from '../data/videomaker'
 <template>
   <EventosSection />
   <MarqueeStrip :itens="faixa" />
+  <EntregasEvento />
   <ManifestoSection />
   <StoriesEtapas />
   <ContatoSection

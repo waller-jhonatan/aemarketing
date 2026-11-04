@@ -302,3 +302,29 @@ a{color:#C9A4FF}a:hover{color:#FFFFFF}
 /* Cards de resultado claros: efeito do hover em tons escuros, fundo continua claro */
 .ae .resultado:not(.gx-dark){--gx-shine:conic-gradient(from 225deg at 50% 50%,rgba(155,59,255,0) 0deg,#9B3BFF 25deg,#E2CCFF 285deg,#FFFFFF 345deg,rgba(155,59,255,0) 360deg);--gx-shine-o:.18;--gx-line:rgba(139,44,245,.12);--gx-tile:rgba(139,44,245,.05);--gx-border:#C9A6FF}
 .ae .resultado:not(.gx-dark):hover{box-shadow:0 24px 48px -26px rgba(122,18,224,.28)}
+/* O que fica do seu evento (/eventos) */
+.ae .ev{position:relative;overflow:hidden;background:#F6F4F9;color:#16131D;padding:120px 24px}
+.ae .ev-grade{max-width:1240px;margin:0 auto}
+.ae .ev-cab{max-width:760px;margin-bottom:56px}
+.ae .ev-sub{margin:24px 0 0;max-width:600px;font-size:18px;line-height:1.6;color:#5E5869}
+.ae .ev-bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:220px;gap:16px}
+.ae .ev-tile{position:relative;overflow:hidden;border-radius:24px;background:#16131D;border:1px solid #E7E2EF}
+.ae .ev-tile.is-video{grid-row:1/span 3;border-color:#16131D;box-shadow:0 40px 90px -30px rgba(122,18,224,.45)}
+.ae .ev-tile.is-video video,.ae .ev-tile.is-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ae .ev-sombra{position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,11,18,.86) 0%,rgba(13,11,18,.2) 45%,rgba(13,11,18,0) 70%);pointer-events:none}
+.ae .ev-chip{position:absolute;left:16px;top:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,11,18,.78);color:#FFFFFF;font-size:12px}
+.ae .ev-chip .live{width:8px;height:8px;border-radius:50%;background:#FF4D6D;display:inline-block}
+.ae .ev-som{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(13,11,18,.55);backdrop-filter:blur(6px);color:#FFFFFF;text-decoration:none;font-size:13px;font-weight:500;transition:background-color .2s}
+.ae .ev-som:hover{background:rgba(122,18,224,.6);color:#FFFFFF}
+.ae .ev-legenda{position:absolute;left:20px;right:20px;bottom:18px;display:flex;flex-direction:column;gap:4px;color:#FFFFFF}
+.ae .ev-legenda strong{font-size:18px;font-weight:700}
+.ae .ev-legenda span{font-size:14px;line-height:1.45;color:#D6D0E2}
+.ae .ev-tile.is-motivo{padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;background:#FFFFFF;transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.ae .ev-tile.is-motivo:hover{border-color:#B57BFF;transform:translateY(-4px);box-shadow:0 24px 48px -26px rgba(122,18,224,.28)}
+.ae .ev-n{font-size:clamp(30px,2.8vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.ae .ev-tile.is-motivo p{margin:0;font-size:15px;line-height:1.5;color:#5E5869}
+.rv-on .ae .ev-tile.rv.is-in{animation-name:aeRise;animation-duration:1s}
+@media (max-width:900px){.ae .ev{padding:96px 20px}.ae .ev-bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:200px}.ae .ev-tile.is-video{grid-row:1/span 3}}
+@media (max-width:560px){.ae .ev-bento{grid-template-columns:1fr;grid-auto-rows:auto}.ae .ev-tile.is-video{grid-row:auto;aspect-ratio:9/13}.ae .ev-tile.is-foto{height:240px}.ae .ev-tile.is-motivo{padding:24px}}
+/* Botão de contorno em fundo claro */
+.ae .st .btn-g:hover,.ae .ev .btn-g:hover{background-color:rgba(22,19,29,.06);color:#16131D}

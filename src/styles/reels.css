@@ -41,14 +41,14 @@
 @keyframes igSobe{0%{opacity:0;transform:translate(-50%,0) scale(.5)}12%{opacity:.95}100%{opacity:0;transform:translate(calc(-50% + var(--x,0px)),-220px) scale(1.1)}}
 /* The two lower cards sit just above ETERNIZADOS instead of covering it. */
 /* Stories */
-.ae .st{position:relative;overflow:hidden;background:#0D0B12;padding:120px 24px}
+.ae .st{position:relative;overflow:hidden;background:#FFFFFF;color:#16131D;padding:120px 24px}
 .ae .st-grade{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:64px}
 .ae .st-texto{flex:1 1 440px;min-width:0}
-.ae .st-lista{margin:40px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.12)}
-.ae .st-lista button{width:100%;display:flex;align-items:center;gap:18px;padding:18px 0;background:none;border:0;border-bottom:1px solid rgba(255,255,255,.12);color:#8E879B;text-align:left;cursor:pointer;font:inherit;transition:color .3s,padding-left .3s}
-.ae .st-lista button:hover,.ae .st-lista .is-ativa button{color:#FFFFFF;padding-left:8px}
-.ae .st-lista button:focus-visible{outline:2px solid #C9A4FF;outline-offset:-2px}
-.ae .st-lista .st-n{font-size:13px;letter-spacing:.14em;color:#B57BFF}
+.ae .st-lista{margin:40px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #E7E2EF}
+.ae .st-lista button{width:100%;display:flex;align-items:center;gap:18px;padding:18px 0;background:none;border:0;border-bottom:1px solid #E7E2EF;color:#7A7387;text-align:left;cursor:pointer;font:inherit;transition:color .3s,padding-left .3s}
+.ae .st-lista button:hover,.ae .st-lista .is-ativa button{color:#16131D;padding-left:8px}
+.ae .st-lista button:focus-visible{outline:2px solid #7A12E0;outline-offset:-2px}
+.ae .st-lista .st-n{font-size:13px;letter-spacing:.14em;color:#7A12E0}
 .ae .st-lista strong{font-size:18px;font-weight:600}
 .ae .st-lista span.st-tx{display:block;margin-top:4px;font-size:14px;line-height:1.5}
 .ae .st-cartao{position:relative;flex:0 1 360px;width:min(360px,100%);aspect-ratio:9/16;margin:0 auto;border-radius:28px;overflow:hidden;background:#16131D;box-shadow:0 40px 90px -30px rgba(122,18,224,.7);user-select:none;-webkit-tap-highlight-color:transparent}

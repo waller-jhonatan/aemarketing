@@ -44,16 +44,16 @@ onBeforeUnmount(() => {
 
 <template>
   <section id="etapas" class="st">
-    <div class="glow" aria-hidden="true" style="position: absolute; right: -260px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(circle, rgba(140,40,240,0.3) 0%, rgba(13,11,18,0) 65%); pointer-events: none"></div>
+    <div class="glow" aria-hidden="true" style="position: absolute; right: -260px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(circle, rgba(140,40,240,0.14) 0%, rgba(255,255,255,0) 65%); pointer-events: none"></div>
     <div class="st-grade" style="position: relative">
       <div class="st-texto">
-        <p class="m rv" style="margin: 0 0 24px; font-size: 13px; color: #C9A4FF; display: flex; align-items: center; gap: 12px">
-          <span aria-hidden="true" style="width: 32px; height: 2px; background: #9B3BFF; display: inline-block"></span>Como funciona
+        <p class="m rv" style="margin: 0 0 24px; font-size: 13px; color: #6B12C9; display: flex; align-items: center; gap: 12px">
+          <span aria-hidden="true" style="width: 32px; height: 2px; background: #6B12C9; display: inline-block"></span>Como funciona
         </p>
-        <h2 class="rv" style="margin: 0; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em; color: #FFFFFF">
+        <h2 class="rv" style="margin: 0; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; font-weight: 300; letter-spacing: -0.03em; color: #16131D">
           Do primeiro brinde <span class="grad" style="font-weight: 800">à última música.</span>
         </h2>
-        <p class="rv" style="margin: 24px 0 0; max-width: 520px; font-size: 18px; line-height: 1.6; color: #B9B2C7">
+        <p class="rv" style="margin: 24px 0 0; max-width: 520px; font-size: 18px; line-height: 1.6; color: #5E5869">
           Três etapas, do alinhamento à entrega. Toque no story para avançar.
         </p>
 
@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
             Orçar meu evento
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
-          <a class="btn btn-g" :href="contato.instagram" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #F4F1FA; text-decoration: none; font-weight: 500; font-size: 16px">
+          <a class="btn btn-g" :href="contato.instagram" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 999px; border: 1px solid rgba(22,19,29,0.22); color: #16131D; text-decoration: none; font-weight: 500; font-size: 16px">
             Ver mais no Instagram
           </a>
         </div>
