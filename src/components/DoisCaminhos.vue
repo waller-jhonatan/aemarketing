@@ -5,13 +5,11 @@
 
 // No celular a semana vira uma lista, com o nome do dia por extenso.
 const semana = [
-  { dia: 'Seg', itens: [{ nome: 'Post', tipo: 'post' }] },
+  { dia: 'Seg', itens: [{ nome: 'Post', tipo: 'post' }, { nome: 'Stories', tipo: 'stories' }] },
   { dia: 'Ter', itens: [{ nome: 'Reels', tipo: 'reels' }, { nome: 'Stories', tipo: 'stories' }] },
-  { dia: 'Qua', itens: [{ nome: 'Post', tipo: 'post' }] },
+  { dia: 'Qua', itens: [{ nome: 'Post', tipo: 'post' }, { nome: 'Stories', tipo: 'stories' }] },
   { dia: 'Qui', itens: [{ nome: 'Anúncio', tipo: 'anuncio' }, { nome: 'Stories', tipo: 'stories' }] },
-  { dia: 'Sex', itens: [{ nome: 'Reels', tipo: 'reels' }] },
-  { dia: 'Sáb', itens: [{ nome: 'Stories', tipo: 'stories' }, { nome: 'Post', tipo: 'post' }] },
-  { dia: 'Dom', itens: [{ nome: 'Relatório', tipo: 'relatorio' }] },
+  { dia: 'Sex', itens: [{ nome: 'Reels', tipo: 'reels' }, { nome: 'Stories', tipo: 'stories' }] },
 ]
 
 const servicos = [
@@ -60,7 +58,7 @@ const entregas = [
           <h3 class="d">Presença todo mês</h3>
           <p class="dc-texto">Gestão de redes, conteúdo e tráfego pago para a sua marca aparecer sempre — e ser escolhida.</p>
 
-          <div class="dc-bloco" role="img" aria-label="Exemplo de uma semana de conteúdo: posts, reels, stories, anúncio e relatório">
+          <div class="dc-bloco" role="img" aria-label="Exemplo de uma semana de conteúdo: posts, reels, anúncio e stories todos os dias">
             <span class="m dc-bloco-titulo" aria-hidden="true">Sua semana nas redes</span>
             <div class="dc-semana">
               <div v-for="(d, i) in semana" :key="i" class="dc-dia">
